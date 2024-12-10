@@ -23,14 +23,13 @@ int main(int argc, const char *argv[]) {
         printf("Unknown socket mode \n");
         exit(0);
     }
-    char buf[BUFFER_SIZE];
     
     switch (mode) {
         case MODE_TCP:
-            tcpEcho(port, buf, BUFFER_SIZE);
+            // tcpEcho(port, bufs, VLEN, BUFFER_SIZE);
             break;
         case MODE_UDP:
-            udpEcho(port, buf, BUFFER_SIZE);
+            udpEcho(port, VLEN, BUFFER_SIZE);
             break;
     }
 
